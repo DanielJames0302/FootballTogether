@@ -22,12 +22,29 @@
     ],
     "scripts": {
         "dev": "vite --config vite/config.dev.mjs",
-        "build": "vite build --config vite/config.prod.mjs"
+        "start-server": "tsx watch tsconfig.server.json src/server/index.ts",
+        "build": "vite build --config vite/config.prod.mjs",
+        "test": "mocha -r tsx test/**_test.ts --exit --timeout 15000"
+
     },
     "dependencies": {
+        "@clerk/clerk-react": "^5.0.0",
+        "@reduxjs/toolkit": "^2.2.3",
+        "autoprefixer": "^10.4.19",
+        "colyseus.js": "^0.15.18",
+        "convex": "^1.11.2",
         "phaser": "^3.80.1",
+        "postcss": "^8.4.38",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "react-redux": "^9.1.1",
+        "react-router-dom": "^6.22.3",
+        "uuid": "^9.0.1",
+        "@colyseus/monitor": "^0.15.0",
+        "@colyseus/playground": "^0.15.3",
+        "@colyseus/tools": "^0.15.0",
+        "colyseus": "^0.15.0",
+        "express": "^4.18.2"
     },
     "devDependencies": {
         "@types/react": "^18.2.55",
@@ -38,8 +55,16 @@
         "eslint": "^8.57.0",
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.4.5",
+        "tailwindcss": "^3.4.3",
         "terser": "^5.28.1",
         "typescript": "^5.3.3",
-        "vite": "^5.1.4"
+        "vite": "^5.1.4",
+        "@colyseus/loadtest": "^0.15.0",
+        "@colyseus/testing": "^0.15.0",
+        "@types/express": "^4.17.1",
+        "@types/mocha": "^10.0.1",
+        "mocha": "^10.2.0",
+        "rimraf": "^5.0.0",
+        "tsx": "^3.12.6"
     }
 }
